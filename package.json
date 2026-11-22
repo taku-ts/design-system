@@ -1,6 +1,6 @@
 {
   "name": "@taku-ts/design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CSS-only minimal design system for taku-ts.com",
   "private": true,
   "license": "MIT",

@@ -15,7 +15,7 @@
 ### npm（GitHub のタグを指定）
 
 ```bash
-npm install github:taku-ts/design-system#v0.1.0
+npm install github:taku-ts/design-system#v0.1.1
 ```
 
 `package.json` には次のように記録されます。
@@ -23,7 +23,7 @@ npm install github:taku-ts/design-system#v0.1.0
 ```json
 {
   "dependencies": {
-    "@taku-ts/design-system": "github:taku-ts/design-system#v0.1.0"
+    "@taku-ts/design-system": "github:taku-ts/design-system#v0.1.1"
   }
 }
 ```
@@ -31,7 +31,7 @@ npm install github:taku-ts/design-system#v0.1.0
 ### CDN（`<link>` だけで使う）
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taku-ts/design-system@v0.1.0/styles/index.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taku-ts/design-system@v0.1.1/styles/index.css" />
 ```
 
 ## 読み込み方
@@ -42,7 +42,17 @@ npm install github:taku-ts/design-system#v0.1.0
 
 ```astro
 ---
-import "@taku-ts/design-system";
+import "@taku-ts/design-system/styles/index.css";
+---
+```
+
+> **`.css` まで書いてください。** `import "@taku-ts/design-system";` でもビルドは通りますが、TypeScript がこのパッケージを CSS だと判断できないため、エディタや `astro check` で型エラー（ts(2882)）になります。パスが `.css` で終わっていれば、Astro が用意している CSS 用の型が適用されます。
+
+個別のファイルだけを読み込むこともできます（例：トークンだけ使う）。
+
+```astro
+---
+import "@taku-ts/design-system/styles/tokens.css";
 ---
 ```
 
