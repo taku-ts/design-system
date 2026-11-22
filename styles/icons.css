@@ -1,0 +1,42 @@
+/* =========================================================
+   Icons
+   アイコンの「見た目のルール」だけを定義する（SVG・JSは同梱しない）。
+   表示は利用側で <iconify-icon> などを使う。
+   例：<iconify-icon class="icon" icon="material-symbols:home"></iconify-icon>
+   ========================================================= */
+
+/* 周りの文字サイズに合わせて大きさが決まる（em 基準） */
+.icon {
+	display: inline-block;
+	flex-shrink: 0; /* flex の中で押しつぶされない */
+	font-size: var(--icon-size, 1.25em); /* 周りの文字の 1.25 倍 */
+	width: 1em; /* ↑で決めた自分の font-size と同じ幅・高さ */
+	height: 1em;
+	vertical-align: -0.125em; /* 文章中に置いたとき、文字の高さに目で見てそろう位置 */
+	color: currentColor; /* 親の文字色をそのまま使う（ボタン内なら文字と同じ色） */
+}
+
+/* サイズのバリエーション：変数を上書きするだけ */
+.icon--sm {
+	--icon-size: 1em;
+}
+
+.icon--lg {
+	--icon-size: 1.5em;
+}
+
+/* 色のバリエーション */
+.icon--muted {
+	color: var(--color-muted);
+}
+
+.icon--accent {
+	color: var(--color-accent);
+}
+
+/* アイコン＋文字を横に並べる（リンクや見出しなど、.btn 以外で使う） */
+.icon-label {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2);
+}

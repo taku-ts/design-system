@@ -1,0 +1,25 @@
+{
+  "name": "@taku-ts/design-system",
+  "version": "0.1.0",
+  "description": "CSS-only minimal design system for taku-ts.com",
+  "private": true,
+  "license": "MIT",
+  "author": "taku-ts",
+  "homepage": "https://github.com/taku-ts/design-system#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taku-ts/design-system.git"
+  },
+  "keywords": [
+    "css",
+    "design-system",
+    "design-tokens"
+  ],
+  "files": [
+    "styles"
+  ],
+  "exports": {
+    ".": "./styles/index.css",
+    "./styles/*": "./styles/*"
+  }
+}

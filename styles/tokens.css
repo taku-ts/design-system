@@ -1,0 +1,60 @@
+/* =========================================================
+   Design Tokens
+   デザインの「値」を一か所にまとめた変数（CSSカスタムプロパティ）。
+   部品（components.css）は、ここに定義した変数だけを使う。
+   ========================================================= */
+
+:root {
+	/* ダーク配色であることをブラウザに伝える（スクロールバー・フォーム部品も暗くなる） */
+	color-scheme: dark;
+
+	/* ---------- Color ---------- */
+	--color-bg: #0f1115; /* ページの背景 */
+	--color-surface: #1a1d24; /* カードなど、背景より一段浮いた面 */
+	--color-border: #2a2f3a; /* 枠線・区切り線 */
+	--color-text: #e6e8eb; /* 本文 */
+	--color-muted: #9aa3af; /* 補足・控えめな文字 */
+	--color-accent: #7dd3fc; /* リンク・強調・メインボタン */
+	--color-accent-hover: #bae6fd; /* accent のホバー時 */
+	--color-on-accent: #0f1115; /* accent の上に載せる文字色 */
+	--color-link: var(--color-accent); /* リンク文字（今は accent と同じ。分けたくなったらここだけ変える） */
+	--color-link-hover: var(--color-accent-hover); /* リンクのホバー時 */
+
+	/* ---------- Space（余白：padding / margin / gap はこの段階だけを使う） ---------- */
+	--space-1: 0.25rem; /*  4px */
+	--space-2: 0.5rem; /*  8px */
+	--space-3: 0.75rem; /* 12px */
+	--space-4: 1rem; /* 16px */
+	--space-5: 1.5rem; /* 24px */
+	--space-6: 2rem; /* 32px */
+	--space-7: 3rem; /* 48px */
+	--space-8: 4rem; /* 64px */
+
+	/* ---------- Typography ---------- */
+	/* 左から順に探して最初に見つかったものを使う：Mac/iOS → 古いMac/iOS → Windows → その他（Android等） */
+	--font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	--font-size-sm: 0.875rem; /* 14px：補足・タグ */
+	--font-size-base: 1rem; /* 16px：本文 */
+	--font-size-lg: 1.25rem; /* 20px：小見出し */
+	--font-size-xl: 1.5rem; /* 24px：見出し */
+	--font-size-2xl: 2.5rem; /* 40px：ページタイトル */
+
+	--line-height-tight: 1.3; /* 見出し用 */
+	--line-height-base: 1.8; /* 本文用（日本語は広めが読みやすい） */
+
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+
+	/* ---------- Radius（角丸） ---------- */
+	--radius-sm: 4px; /* 小さな部品 */
+	--radius-md: 8px; /* ボタン・カード */
+	--radius-full: 9999px; /* 丸・ピル型 */
+
+	/* ---------- Layout ---------- */
+	--container-max: 640px; /* 本文の最大幅（読みやすい行の長さ） */
+
+	/* ---------- Motion ---------- */
+	--transition-fast: 150ms ease; /* ホバーなどの短い変化 */
+}

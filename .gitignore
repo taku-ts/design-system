@@ -1,0 +1,8 @@
+# Claude Code（個人用の指示書）
+CLAUDE.md
+
+# 依存パッケージ（カタログ確認などで入れた場合）
+node_modules/
+
+# OS が作るファイル
+.DS_Store

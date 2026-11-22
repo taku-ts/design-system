@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Design System Catalog | taku-ts</title>
+
+		<!-- デザインシステム本体（利用側と同じく index.css を1つ読むだけ） -->
+		<link rel="stylesheet" href="./styles/index.css" />
+
+		<!-- アイコン表示の確認用（カタログだけで読み込む。CSSパッケージには含めない） -->
+		<script src="https://code.iconify.design/iconify-icon/3.0.5/iconify-icon.min.js"></script>
+
+		<!-- カタログ専用の見た目（見本を並べるためだけのもの。デザインシステムには含めない） -->
+		<style>
+			.catalog-header {
+				padding-block: var(--space-8) var(--space-6);
+			}
+			.catalog-title {
+				margin: 0;
+				font-size: var(--font-size-2xl);
+				line-height: var(--line-height-tight);
+			}
+			.catalog-section-title {
+				margin: 0;
+				font-size: var(--font-size-xl);
+				line-height: var(--line-height-tight);
+			}
+			.catalog-label {
+				margin: 0;
+				color: var(--color-muted);
+				font-family: var(--font-mono);
+				font-size: var(--font-size-sm);
+			}
+			.catalog-row {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: var(--space-3);
+			}
+			.catalog-swatches {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+				gap: var(--space-3);
+			}
+			.catalog-swatch {
+				height: var(--space-7);
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius-sm);
+			}
+			.catalog-space-bar {
+				height: var(--space-3);
+				background: var(--color-accent);
+				border-radius: var(--radius-sm);
+			}
+			.catalog-footer {
+				padding-block: var(--space-7);
+				color: var(--color-muted);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="catalog-header stack stack--sm">
+				<h1 class="catalog-title">Design System</h1>
+				<p class="catalog-label">@taku-ts/design-system — CSS only</p>
+			</header>
+
+			<main class="stack stack--lg">
+				<!-- ========== Color ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Color</h2>
+					<div class="catalog-swatches">
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-bg)"></div>
+							<p class="catalog-label">--color-bg</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-surface)"></div>
+							<p class="catalog-label">--color-surface</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-border)"></div>
+							<p class="catalog-label">--color-border</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-text)"></div>
+							<p class="catalog-label">--color-text</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-muted)"></div>
+							<p class="catalog-label">--color-muted</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-accent)"></div>
+							<p class="catalog-label">--color-accent</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-accent-hover)"></div>
+							<p class="catalog-label">--color-accent-hover</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-on-accent)"></div>
+							<p class="catalog-label">--color-on-accent</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-link)"></div>
+							<p class="catalog-label">--color-link</p>
+						</div>
+						<div class="stack stack--sm">
+							<div class="catalog-swatch" style="background: var(--color-link-hover)"></div>
+							<p class="catalog-label">--color-link-hover</p>
+						</div>
+					</div>
+					<p style="margin: 0">文章中の <a href="#">リンク</a> はこの色になります。</p>
+				</section>
+
+				<!-- ========== Space ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Space</h2>
+					<div class="stack stack--sm">
+						<p class="catalog-label">--space-1（4px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-1)"></div>
+						<p class="catalog-label">--space-2（8px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-2)"></div>
+						<p class="catalog-label">--space-3（12px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-3)"></div>
+						<p class="catalog-label">--space-4（16px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-4)"></div>
+						<p class="catalog-label">--space-5（24px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-5)"></div>
+						<p class="catalog-label">--space-6（32px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-6)"></div>
+						<p class="catalog-label">--space-7（48px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-7)"></div>
+						<p class="catalog-label">--space-8（64px）</p>
+						<div class="catalog-space-bar" style="width: var(--space-8)"></div>
+					</div>
+				</section>
+
+				<!-- ========== Typography ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Typography</h2>
+					<div class="stack stack--sm">
+						<p class="catalog-label">--font-size-2xl</p>
+						<p style="margin: 0; font-size: var(--font-size-2xl); line-height: var(--line-height-tight)">見出し Heading</p>
+						<p class="catalog-label">--font-size-xl</p>
+						<p style="margin: 0; font-size: var(--font-size-xl); line-height: var(--line-height-tight)">見出し Heading</p>
+						<p class="catalog-label">--font-size-lg</p>
+						<p style="margin: 0; font-size: var(--font-size-lg)">小見出し Subheading</p>
+						<p class="catalog-label">--font-size-base</p>
+						<p style="margin: 0">本文のテキストです。日本語が読みやすいように、行間を広めに取っています。</p>
+						<p class="catalog-label">--font-size-sm</p>
+						<p style="margin: 0; font-size: var(--font-size-sm)">補足のテキストです。</p>
+					</div>
+				</section>
+
+				<!-- ========== Button ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Button</h2>
+
+					<p class="catalog-label">.btn / .btn--primary / .btn--ghost</p>
+					<div class="catalog-row">
+						<button class="btn" type="button">Default</button>
+						<button class="btn btn--primary" type="button">Primary</button>
+						<button class="btn btn--ghost" type="button">Ghost</button>
+					</div>
+
+					<p class="catalog-label">with .icon</p>
+					<div class="catalog-row">
+						<a class="btn" href="#">
+							<iconify-icon class="icon" icon="simple-icons:github"></iconify-icon>
+							GitHub
+						</a>
+						<a class="btn btn--primary" href="#">
+							記事を読む
+							<iconify-icon class="icon" icon="material-symbols:arrow-forward"></iconify-icon>
+						</a>
+						<button class="btn btn--ghost" type="button">
+							<iconify-icon class="icon" icon="material-symbols:settings-outline"></iconify-icon>
+							Settings
+						</button>
+					</div>
+
+					<p class="catalog-label">disabled / aria-disabled="true"</p>
+					<div class="catalog-row">
+						<button class="btn" type="button" disabled>Default</button>
+						<button class="btn btn--primary" type="button" disabled>Primary</button>
+						<a class="btn btn--ghost" aria-disabled="true">Ghost (link)</a>
+					</div>
+				</section>
+
+				<!-- ========== Card ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Card</h2>
+					<p class="catalog-label">.card / .card__title / .card__body</p>
+					<div class="card stack stack--sm">
+						<h3 class="card__title">Card title</h3>
+						<p class="card__body">カードの本文です。背景より一段浮いた面で、内容をひとまとまりに見せます。</p>
+						<div class="catalog-row">
+							<a class="btn btn--primary" href="#">Primary</a>
+							<a class="btn btn--ghost" href="#">Ghost</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- ========== Stack ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Stack</h2>
+					<p class="catalog-label">.stack--sm（8px）/ .stack（16px）/ .stack--lg（32px）</p>
+					<div class="catalog-swatches">
+						<div class="stack stack--sm">
+							<div class="card">A</div>
+							<div class="card">B</div>
+						</div>
+						<div class="stack">
+							<div class="card">A</div>
+							<div class="card">B</div>
+						</div>
+						<div class="stack stack--lg">
+							<div class="card">A</div>
+							<div class="card">B</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ========== Icon ========== -->
+				<section class="stack">
+					<h2 class="catalog-section-title">Icon</h2>
+
+					<p class="catalog-label">.icon--sm / .icon / .icon--lg</p>
+					<div class="catalog-row">
+						<iconify-icon class="icon icon--sm" icon="material-symbols:home-outline"></iconify-icon>
+						<iconify-icon class="icon" icon="material-symbols:home-outline"></iconify-icon>
+						<iconify-icon class="icon icon--lg" icon="material-symbols:home-outline"></iconify-icon>
+					</div>
+
+					<p class="catalog-label">.icon--muted / .icon--accent</p>
+					<div class="catalog-row">
+						<iconify-icon class="icon icon--muted" icon="material-symbols:info-outline"></iconify-icon>
+						<iconify-icon class="icon icon--accent" icon="material-symbols:star"></iconify-icon>
+					</div>
+
+					<p class="catalog-label">.icon-label（アイコン＋文字）</p>
+					<div class="catalog-row">
+						<a class="icon-label" href="#">
+							<iconify-icon class="icon" icon="simple-icons:github"></iconify-icon>
+							GitHub
+						</a>
+						<a class="icon-label" href="#">
+							<iconify-icon class="icon" icon="material-symbols:mail-outline"></iconify-icon>
+							Contact
+						</a>
+					</div>
+
+					<p class="catalog-label">文章中のアイコン（vertical-align）</p>
+					<p style="margin: 0">
+						テキストの途中に
+						<iconify-icon class="icon" icon="material-symbols:check-circle-outline"></iconify-icon>
+						アイコンを置いても、文字の高さにそろいます。
+					</p>
+				</section>
+			</main>
+
+			<footer class="catalog-footer">
+				<small>&copy; taku-ts / design-system</small>
+			</footer>
+		</div>
+	</body>
+</html>
